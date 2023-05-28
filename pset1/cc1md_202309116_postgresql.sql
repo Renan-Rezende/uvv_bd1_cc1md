@@ -20,7 +20,7 @@ createrole
 encrypted password 'rl97876681';
 
 CREATE DATABASE uvv WITH 
-ower              =   renan
+owner             =   renan
 encoding          =  "UTF8"
 lc_collate        =  'pt_BR.UTF-8'
 lc_ctype          =  'pt_BR.UTF-8'
@@ -115,19 +115,19 @@ COMMENT ON COLUMN lojas.lojas.nome                    IS 'Nome das lojas';
 -- Tabela dos "estoques" e suas respectivas colunas:
 
 CREATE TABLE lojas.estoques (
-                estoques_id   NUMERIC(38)    NOT NULL,
-                quantidade    NUMERIC(38)    NOT NULL,
-                loja_id       NUMERIC(38)    NOT NULL,
-                produto_id    NUMERIC(38)    NOT NULL,
-                CONSTRAINT pk_estoques PRIMARY KEY (estoque_id)
-);
+                estoque_id      NUMERIC(38)   NOT NULL,
+                loja_id         NUMERIC(38)   NOT NULL,
+                produto_id      NUMERIC(38)   NOT NULL,
+                quantidade      NUMERIC(38)   NOT NULL,
+                CONSTRAINT pk_estoques  PRIMARY KEY (estoque_id)
 
+            );
 
 
  -- Comentários da tabela e das colunas "lojas" respectivamente:
  
 COMMENT ON TABLE  lojas.estoques              IS 'Tabela com informçôes dos estoques';
-COMMENT ON COLUMN lojas.estoques.estoques_id  IS 'Numuero de identificação dos estoques';
+COMMENT ON COLUMN lojas.estoques.estoque_id   IS  'Numuero de identificação dos estoques';
 COMMENT ON COLUMN lojas.estoques.quantidade   IS 'Quantidade de estoques';
 COMMENT ON COLUMN lojas.estoques.loja_id      IS 'Em qual loja esta o estoque (FK -> loja)';
 COMMENT ON COLUMN lojas.estoques.produto_id   IS 'Produtos que estão nos determinados estoques';
@@ -148,13 +148,13 @@ CREATE TABLE lojas.clientes (
 
  -- Comentários da tabela e das colunas "clientes" respectivamente:
  
-COMMENT ON TABLE lojas.clientes IS       'Tabela com informações dos clientes';
-COMMENT ON COLUMN clientes.cliente_id IS 'Identificação dos clientes (PK)';
-COMMENT ON COLUMN clientes.email IS      'Email dos clientes';
-COMMENT ON COLUMN clientes.nome IS       'Nome dos clientes';
-COMMENT ON COLUMN clientes.telefone1 IS  'Telefone 1 dos clintes';
-COMMENT ON COLUMN clientes.telefone2 IS  'Telefone 2 dos clientes';
-COMMENT ON COLUMN clientes.telefone3 IS  'Telefone 3 dos clientes';
+COMMENT ON TABLE  lojas.clientes IS       'Tabela com informações dos clientes';
+COMMENT ON COLUMN lojas.clientes.cliente_id IS 'Identificação dos clientes (PK)';
+COMMENT ON COLUMN lojas.clientes.email IS      'Email dos clientes';
+COMMENT ON COLUMN lojas.clientes.nome IS       'Nome dos clientes';
+COMMENT ON COLUMN lojas.clientes.telefone1 IS  'Telefone 1 dos clintes';
+COMMENT ON COLUMN lojas.clientes.telefone2 IS  'Telefone 2 dos clientes';
+COMMENT ON COLUMN lojas.clientes.telefone3 IS  'Telefone 3 dos clientes';
 
 
 
@@ -184,7 +184,7 @@ COMMENT ON COLUMN lojas.envios.status              IS 'Status da entrega';
 -- Tabela dos "pedidos" e suas respectivas colunas:
 
 CREATE TABLE lojas.pedidos (
-                pedidos_id                NUMERIC(38)   NOT NULL,
+                pedido_id                NUMERIC(38)   NOT NULL,
                 data_hora                 TIMESTAMP     NOT NULL,
                 loja_id                   NUMERIC(38)   NOT NULL,
                 cliente_id                NUMERIC(38)   NOT NULL,
@@ -196,7 +196,7 @@ CREATE TABLE lojas.pedidos (
  -- Comentários da tabela e das colunas "pedidos" respectivamente:
 
 COMMENT ON TABLE  lojas.pedidos             IS 'Tabela com informações dos pedidos';
-COMMENT ON COLUMN lojas.pedidos.pedidos_id  IS ' Numero de identificação do pedidos (PK)';
+COMMENT ON COLUMN lojas.pedidos.pedido_id  IS ' Numero de identificação do pedidos (PK)';
 COMMENT ON COLUMN lojas.pedidos.data_hora   IS 'Data e horas dos pedidos';
 COMMENT ON COLUMN lojas.pedidos.loja_id     IS 'Lojas que receberam os pedidos (FK -> lojas)';
 COMMENT ON COLUMN lojas.pedidos.cliente_id  IS 'clientes que fizeram os pedidos ( FK -> clientes)';
@@ -221,7 +221,7 @@ CREATE TABLE lojas.pedidos_itens (
 COMMENT ON TABLE  lojas.pedidos_itens                  IS 'Tabela com informações dos itens dos pedidos';
 COMMENT ON COLUMN lojas.pedidos_itens.pedido_id        IS 'Identificação dos pedidos (PK)';
 COMMENT ON COLUMN lojas.pedidos_itens.produto_id       IS 'identificação dos produtos que tambem é uma identificação dos pedidos_itens (PK) e (FK)';
-COMMENT ON COLUMN lojas.pedidos_itens.pedidos_id       IS 'identifcação do pedido que tambem é uma identificação do pedido_itens (PK) e (FK)';
+COMMENT ON COLUMN lojas.pedidos_itens.pedido_id       IS 'identifcação do pedido que tambem é uma identificação do pedido_itens (PK) e (FK)';
 COMMENT ON COLUMN lojas.pedidos_itens.envio_id         IS 'identificação do envio(FK)';
 COMMENT ON COLUMN lojas.pedidos_itens.preco_unitario   IS 'Preço de cada item dos pedidos';
 COMMENT ON COLUMN lojas.pedidos_itens.quantidade       IS 'Quantidade de itens dos pedidos';
