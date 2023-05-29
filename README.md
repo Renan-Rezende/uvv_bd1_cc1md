@@ -4,7 +4,7 @@ O pset consiste em um trabalho extenso que contempla a criação de um banco de 
 
 Nos diretórios a seguir estão os arquivos relacionados ao projeto:
 
-- [cc1md_202309116_postgresql.architect](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.architect)
-- [cc1md_202309116_postgresql.pdf](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.pdf)
-- [cc1md_202309116_postgresql.sql](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.sql)
+- [Arquivo.architect](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.architect) contem o script architect do diagrma do banco de dados.
+- [Arquivo.pdf](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.pdf) contem o diagrama do banco de dados chamado "Lojas UVV".
+- [Arquivo.sql](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.sql) contem o script sql que sera rodado pelo professor.
 
