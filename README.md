@@ -1,13 +1,10 @@
 # Projeto PSET
 
-Neste projeto do meu primeiro período da faculdade, desenvolvi um banco de dados em PostgreSQL do zero, em um período de 2 semanas (14 dias). Esse período se estendeu devido ao fato de nunca termos tido contato com a criação de bancos de dados.
+O pset consiste em um trabalho extenso que contempla a criação de um banco de dados em script (sem o uso de uma interface gráfica) utilizando o PostgreSQL. Tendo como maior dificuldade neste trabalho, o fato de nunca ter tido contato algum com criação de banco de dados ou algo similar.
 
----
+Nos diretórios a seguir estão os arquivos relacionados ao projeto:
 
-## Sobre o banco de dados
+- [cc1md_202309116_postgresql.architect](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.architect)
+- [cc1md_202309116_postgresql.pdf](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.pdf)
+- [cc1md_202309116_postgresql.sql](https://github.com/Renan-Rezende/uvv_bd1_cc1md/blob/main/pset1/cc1md_202309116_postgresql.sql)
 
-Este banco de dados foi desenvolvido para uma loja fictícia da UVV, contendo os dados dos produtos, envios, clientes, lojas, etc. Nos diretórios a seguir, seguem 3 arquivos relacionados ao banco de dados:
-
-- Arquivo.pdf: Contém o diagrama do banco de dados.
-- Arquivo.Archtect: Arquivo relacionado à arquitetura do projeto.
-- Arquivo.sql: Contém o script completo do projeto.
