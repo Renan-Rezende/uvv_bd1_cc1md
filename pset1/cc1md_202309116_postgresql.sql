@@ -60,7 +60,7 @@ CREATE TABLE lojas.produtos (
                 imagem_ultima_atualização    DATE            ,
                 nome                         VARCHAR(255)    NOT NULL,
                 imagem_mime_type             VARCHAR(512)    ,
-                preco_unitario               NUMERIC(10,2)   NOT NULL,
+                preco_unitario               NUMERIC(10,2)   ,
                 imagem_charset               VARCHAR(512)    ,
                 detalhes                     BYTEA           ,
                 CONSTRAINT pk_produtos PRIMARY KEY (produto_id)
@@ -188,7 +188,7 @@ CREATE TABLE lojas.pedidos (
                 data_hora                 TIMESTAMP     NOT NULL,
                 loja_id                   NUMERIC(38)   NOT NULL,
                 cliente_id                NUMERIC(38)   NOT NULL,
-                status                    VARCHAR(15)   NOT NULL,
+                status                    VARCHAR(15),
                 CONSTRAINT pk_pedidos PRIMARY KEY (pedido_id)
                     
 );
@@ -207,7 +207,7 @@ COMMENT ON COLUMN lojas.pedidos.status      IS 'Status dos pedidos';
 -- Tabela dos "pedidos_itens" e suas respectivas colunas:
 
 CREATE TABLE lojas.pedidos_itens (
-                pedido_id          NUMERIC(38)     NOT NULL,
+                pedido_id          NUMERIC(38)     ,
                 produto_id         NUMERIC(38)     NOT NULL,               
                 envio_id           NUMERIC(38)     NOT NULL,
                 preco_unitario     NUMERIC(10,2)   NOT NULL,
